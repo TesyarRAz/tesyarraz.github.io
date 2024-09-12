@@ -20,7 +20,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 0.5rem 0.5rem;
   max-width: 40rem;
   margin: 0 auto;
   min-height: 100vh;
@@ -83,6 +83,7 @@ main {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    order: 1;
   }
   & .profile-photo {
     width: 6rem;
@@ -93,6 +94,7 @@ main {
 }
 
 .project-summary {
+  order: 2;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -141,6 +143,7 @@ main {
           font-weight: bold;
           color: white;
           text-decoration: none;
+          font-size: 0.7rem;
         }
       }
 
@@ -186,14 +189,46 @@ footer {
   padding: 2rem;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
   & .user-social {
     display: flex;
+    justify-content: center ;
     gap: 1rem;
-    margin-left: auto;
 
     & > a {
       color: white;
     }
   }
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        border-radius: 0;
+    }
+
+    #content {
+        border-radius: 0;
+    }
+
+    #home-tab {
+        flex-direction: row-reverse;
+        gap: 2rem;
+    }
+
+    footer {
+        border-radius: 0;
+    }
+
+    #projects-tab {
+        justify-content: center;
+    }
+
+    body {
+        gap: 0;
+        padding: 0;
+        max-width: 100%;
+    }
 }
